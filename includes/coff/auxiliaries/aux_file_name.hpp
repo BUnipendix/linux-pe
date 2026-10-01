@@ -35,7 +35,7 @@ namespace coff
 {
     // Declare the data type.
     //
-    struct aux_file_name_t
+    struct __attribute__((packed)) aux_file_name_t
     {
         // Name of the file, zero terminated, multiple entries will be used if longer than 18 chars.
         //

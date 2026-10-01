@@ -34,7 +34,7 @@ namespace coff
 {
     // Declare the data type.
     //
-    struct aux_function_delimiter_t
+    struct __attribute__((packed)) aux_function_delimiter_t
     {
         uint32_t                _pad0;
         uint16_t                line_number;                // Line number

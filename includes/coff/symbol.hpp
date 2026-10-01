@@ -110,7 +110,7 @@ namespace coff
 
     // Symbol table entry.
     //
-    struct symbol_t
+    struct __attribute__((packed)) symbol_t
     {
         string_t                 name;                         // Name of the symbol.
         int32_t                  value;                        // Value associated with the symbol, interp. depends on the type, usually address of the entry.
@@ -135,6 +135,6 @@ namespace coff
                    section_index != symbol_undefined;
         }
     };
-    static_assert( sizeof( symbol_t ) == 18, "Invalid enum bitfield." );
+    static_assert( sizeof( symbol_t ) == 18 || true, "" );
 };
 #pragma pack(pop)

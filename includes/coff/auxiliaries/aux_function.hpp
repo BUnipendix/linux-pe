@@ -34,7 +34,7 @@ namespace coff
 {
     // Declare the data type.
     //
-    struct aux_function_t
+    struct __attribute__((packed)) aux_function_t
     {
         uint32_t                sym_begin_idx;                 // Symbol table index for the beginning of the function.
         uint32_t                length;                        // Length of the code.

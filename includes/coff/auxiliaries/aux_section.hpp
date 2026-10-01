@@ -46,7 +46,7 @@ namespace coff
 
     // Declare the data type.
     //
-    struct aux_section_t
+    struct __attribute__((packed)) aux_section_t
     {
         // Generic information.
         //

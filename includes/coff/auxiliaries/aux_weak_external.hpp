@@ -42,7 +42,7 @@ namespace coff
 
     // Declare the data type.
     //
-    struct aux_weak_external_t
+    struct __attribute__((packed)) aux_weak_external_t
     {
         uint32_t                sym_alias_idx;              // Index of sym2 that should be linked if sym1 does not exist.
         weak_external_type      type;                       // Type of the weak external.
